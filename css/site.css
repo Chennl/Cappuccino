@@ -1,0 +1,55 @@
+	body
+	{
+		margin-top: 0px;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-bottom: 0px;
+		font-family: Tahoma, MS Sans Serif, Arial, Sans Serif;
+		font-weight: normal;
+		font-size: 75%;
+		padding:1em; 
+	}
+	
+		table
+	{
+		font-family: Tahoma, MS Sans Serif, Arial, Sans Serif;
+		font-weight: normal;
+		font-size: 100%;
+		color: #000000;
+	}
+	/* query.php*/
+	table{
+	/* border-spacing: 0.5rem; */
+	border: solid thin #ccc; 
+	border-collapse: collapse;
+	width:100%;
+	}
+	td, th {
+  	border: 1px solid #999;
+  	padding: 0.5rem;
+	}
+	#table-result-1 caption { 
+  	padding-bottom: 0.5em; 
+	}
+	#table-result-1 th, 
+	#table-result-1 td { 
+	  border: solid thin #ccc;
+	/*  padding: 0.5rem 2rem;*/
+	}
+	#table-result-1 th,
+	#table-result-1 td { 
+	  white-sapce: nowrap;
+	}
+	#table-result-1 th { 
+	 font-weight:normal;
+	}	
+	#table-result-1 td { 
+  		border-style: none solid; 
+  		 vertical-align: top;
+	}	
+	#table-result-1 th { 
+ 		padding: 0.2em; 
+  		vertical-align: middle; 
+  		text-align: center; 
+	}	
+	#table-result-1 thead tr,#table-result-1 tfoot tr  { background: #eee;}
