@@ -1,5 +1,5 @@
 <?php
-	include 'config.php';
+	include_once 'config.php';
 ?>
 <!DOCTYPE html>
 <html> 
@@ -100,8 +100,8 @@ function onZTreeClick(event, treeId, treeNode, clickFlag){
 var zNodes =[
  				{ name:"支出账务", open:true,click:false,
  					children: [
- 					  {name:"支出记账-xjd",alink:"payments.php?department=100"},
- 					  {name:"支出记账-wlbb",alink:"payments.php?department=101"} 
+ 					  {name:"支出记账-小桔灯",alink:"payments.php?department=100"},
+ 					  {name:"支出记账-未来宝贝",alink:"payments.php?department=101"} 
  					]
  				 },
  				 { name:"收入账务", open:true,click:false,
@@ -163,11 +163,11 @@ $(document).ready(function () {
 	</head>
 	<body class="easyui-layout">
 	<div data-options="region:'north',border:false" class="loc_header"  style="height: 50px; ">
-	<a class="loc-navbar-logo">客户电子审批管理系统</a><span class="loc-navbar-ver">V2.20150918</span>
+	<a class="loc-navbar-logo">国邦财务管理系统</a><span class="loc-navbar-ver">V0.20161101</span>
 	<ul id="navmenu">
-	<li><a href="\account\profile"  data-options="iconCls:'icon-man'" >我的资料</a></li>
-	<li><a href="\account\password"  data-options=" iconcls:'icon-lock'">修改密码</a></li>
-	<li><a href="\account\logout"   data-options=" iconcls:'icon-redo'">注销登录</a></li>
+	<li><a href="#"  data-options="iconCls:'icon-man'" >我的资料</a></li>
+	<li><a href="#"  data-options=" iconcls:'icon-lock'">修改密码</a></li>
+	<li><a href="logout.php"   data-options=" iconcls:'icon-redo'">注销登录</a></li>
 	</ul>
 
 	</div>
@@ -179,20 +179,19 @@ $(document).ready(function () {
 		</div>
 
 		<div title="财务报表" data-options="iconCls:'icon-search'" style="overflow:auto;padding:5px;">
-				<h3 style="color:#0099FF;">Accordion for jQuery</h3>
-				<p>Accordion is a part of easyui framework for jQuery. It lets you define your accordion component on web page more easily.</p>
+				<h3 style="color:#0099FF;">网站建设中</h3>			 
 		</div>
 	</div>
  </div>
 
-	<div data-options="region:'center',title:'Center'" style="overflow: hidden;">
+	<div data-options="region:'center',title:'主操作界面'" style="overflow: hidden;">
 	<div  id="maintabs" class="easyui-tabs" data-options="fit:true,border:false,plain:true">
-	<div title="About" data-options="href:'index_layout.html?m=Home&c=index&a=main'" style="padding:10px"></div>
+	<div title="关于" data-options="href:'index_layout.html?m=Home&c=index&a=main'" style="padding:10px"></div>
 	</div>
 	</div>
 	 
-	<div data-options="region:'south',split:'true'" style="text-align:left; overflow: hidden; height: 40px;">
-	<span class="footer">版权所有：<a href="http://www.app.swirebev.com" target=_blank >太古饮料信息科技有限公司</a>服务热线：400-86-12580</span>
+	<div data-options="region:'south',split:'true'" style="text-align:left; overflow: hidden; height: 0px;">
+	<!--  <span class="footer">版权所有：<a href="http://www.app.swirebev.com" target=_blank >腾飞信息科技有限公司</a>服务热线：400-86-xxxx</span>-->
 	</div>
 
 	</body>

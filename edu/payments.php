@@ -257,7 +257,7 @@
                                     required:true,
                                     onChange:function(newValue,oldValue){
                                         console.info('category onChange');
-                                    	var vals = $(this).combox('getValues');
+                                    //	var vals = $(this).combox('getValues');
                                        // alert(newValue);
                                         }
                             }
