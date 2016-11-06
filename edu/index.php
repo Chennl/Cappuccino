@@ -89,7 +89,7 @@ function onZTreeClick(event, treeId, treeNode, clickFlag){
 			closable: true,
 			cache: true,
 			method: "POST",
-			//content: createFrame(node.attributes.alink)
+			//content: createFrame(treeNode.alink)
 			href: treeNode.alink
 		});
 	}
@@ -100,16 +100,16 @@ function onZTreeClick(event, treeId, treeNode, clickFlag){
 var zNodes =[
  				{ name:"支出账务", open:true,click:false,
  					children: [
- 					  {name:"支出记账-xjd",alink:"payments.php"},
- 					  {name:"支出记账-wlbb",alink:"zcjzxjd.php"} 
+ 					  {name:"支出记账-xjd",alink:"payments.php?department=100"},
+ 					  {name:"支出记账-wlbb",alink:"payments.php?department=101"} 
  					]
  				 },
  				 { name:"收入账务", open:true,click:false,
   					children: [
-  		 				{name:"收入记账-小桔灯",alink:"zcjzxjd.php"},
-  		 				{name:"收入记账-未来宝贝",alink:"zcjzxjd.php"} 
+  		 				{name:"收入记账-小桔灯",alink:"receives.php?department=100"},
+  		 				{name:"收入记账-未来宝贝",alink:"receives.php?department=101"} 
   		 				]
-  		 				 }
+  		 		 }
 				];
  
 $(document).ready(function () {
