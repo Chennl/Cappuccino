@@ -18,7 +18,21 @@
 function onClick1()
 {
 	console.info('jq parent');
-	alert($('p').parent());
+	//alert($('p').parent());
+	
+	// 获取某个时间格式的时间戳
+	var value = "20a4-07-10 10:21:12";
+	 
+	//2014-07-10 10:21:12的时间戳为：1404958872 
+	 var tmp_dt = new Date(Date.parse(value.replace('-','/').replace('-','/')));
+	 if(tmp_dt instanceof Date){
+			console.info(' is date '+value);
+	 }
+	 else
+		 {
+		 console.info('not date '+ value);
+		 }
+	
 	}
 </script>
 </head>

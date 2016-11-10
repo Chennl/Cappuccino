@@ -1,5 +1,6 @@
 <?php 
-define('DB_SERVER','localhost:3306');
+ define('DB_SERVER','localhost');
+//define('DB_SERVER','my3709549.xincache1.cn');
 define('DB_USERNAME','my3709549');
 define('DB_PASSPWORD','gbjy2015');
 define('DB_DATABASE','my3709549');

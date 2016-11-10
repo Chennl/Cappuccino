@@ -306,7 +306,7 @@
           loadGrid();  
      }); 
     </script>
-	<table id='dg<?php echo $rndId;?>'></table>
+	<table id='dgpaybatch'></table>
     <div id="tb<?php echo $rndId;?>" style="height:auto;padding:5px">
         <span><strong>项目摘要:</strong></span><input id='targetdesc<?php echo $rndId;?>' class="easyui-textbox" type="text" name="targetdesc"  value="" size=10 /> 
         <span>支出类别:</span>

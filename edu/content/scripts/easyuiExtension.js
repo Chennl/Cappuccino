@@ -6,6 +6,7 @@ function formatDatebox(value) {
         return '';
     }
     var dt = parseToDate(value);
+ 
     return dt.format("yyyy-MM-dd"); 
 }
 
@@ -27,12 +28,19 @@ function parseToDate(value) {
     var dt;
     if (value instanceof Date) {
         dt = value;
+    //    console.info('instanceof date');
     }
     else {
+ 
+    	 var tmp_dt = new Date(Date.parse(value.replace('-','/').replace('-','/')));
+    	 if(tmp_dt instanceof Date){
+ //   			console.info(' is date '+value);
+    			return tmp_dt;
+    	 }
+    	 
         if (!isNaN(value)) {
             dt = new Date(value);
-        }
-        else if (value.indexOf('/Date') > -1) {
+        }else if (value.indexOf('/Date') > -1) {
             value = value.replace(/\/Date\((-?\d+)\)\//, '$1');
             dt = new Date();
             dt.setTime(value);

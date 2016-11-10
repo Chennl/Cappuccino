@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <?php 
+//include_once 'config.php';
 //ob_start();
- //session_start();
+  session_start();
 ?>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Tutorialspoint.com</title>
+<title>hzgbjy.com</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 
 <style>
@@ -75,15 +76,16 @@ h2 {
          <?php
 			$msg = '';		
 			if (isset ( $_POST ['login'] ) && ! empty ( $_POST ['username'] ) && ! empty ( $_POST ['password'] )) {
-				
-				$name =$_POST ['username'];
+			 
+				$username =$_POST ['username'];
 				$password=$_POST ['password'];
-				
-				if ($_POST ['username'] == 'gbjy' && $_POST ['password'] == 'gbjy123456') {
+				 
+				if ($username='gbjy' &&$password=='gbjy123456' ) {
 					$_SESSION ['valid'] = true;
 					$_SESSION ['timeout'] = time ();
 					$_SESSION ['username'] = $_POST ['username'];
 					$_SESSION['password'] = $_POST['password'];
+					 
 					header('location: index.php');
 					
 				} else {

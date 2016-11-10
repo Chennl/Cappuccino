@@ -1,5 +1,6 @@
 <?php
-	include_once 'config.php';
+include_once 'config.php';
+//include_once 'session.php';
 ?>
 <!DOCTYPE html>
 <html> 
@@ -88,6 +89,16 @@ function onZTreeClick(event, treeId, treeNode, clickFlag){
 			selected: true,
 			closable: true,
 			cache: true,
+		/* 	onBeforeClose: function(title,index){
+				var target = this;
+				$.messager.confirm('确认','你确认想要关闭'+title,function(r){
+					if(r){ 
+						return true;
+						}
+					else{
+						return false;}
+					});
+			}, */
 			method: "POST",
 			//content: createFrame(treeNode.alink)
 			href: treeNode.alink
@@ -99,11 +110,11 @@ function onZTreeClick(event, treeId, treeNode, clickFlag){
 }
 var zNodes =[
  				{ name:"支出账务", open:true,click:false,
- 					children: [
- 					  {name:"支出记账-小桔灯",alink:"payments.php?department=100"},
- 					  {name:"支出记账-未来宝贝",alink:"payments.php?department=101"} 
- 					]
+ 					children: [{ name:"小桔灯",alink:"paymentbatch.php?department=100"},
+ 					  			  {name:"未来宝贝",alink:"paymentbatch.php?department=101"} ]
+ 					
  				 },
+  				{ name:"支出查询", open:true, alink:"paymentQuery.php?department=100"},
  				 { name:"收入账务", open:true,click:false,
   					children: [
   		 				{name:"收入记账-小桔灯",alink:"receives.php?department=100"},
